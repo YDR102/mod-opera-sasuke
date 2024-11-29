@@ -1,0 +1,87 @@
+{
+  "name": "Sasuke",
+  "description": "Quería hacer un mod con mi me gustaría tener sencillo con un fondo chulo con una música chill y sin sonidos raros",
+  "developer": {
+    "name": "Dracgonz"
+  },
+  "icons": {
+    "512": "icon.jpg"
+  },
+  "manifest_version": 3,
+  "mod": {
+    "payload": {
+      "background_music": ["music/pvrvnormvl.m4a"],
+      "browser_sounds": {
+        "CLICK": [],
+        "FEATURE_SWITCH_OFF": ["sound/feature_switch_off.mp3"],
+        "FEATURE_SWITCH_ON": ["sound/feature_switch_on.mp3"],
+        "HOVER": [],
+        "HOVER_UP": [],
+        "IMPORTANT_CLICK": ["sound/important_click.mp3"],
+        "LEVEL_UPGRADE": ["sound/level_upgrade.mp3"],
+        "LIMITER_OFF": ["sound/limiter_off.mp3"],
+        "LIMITER_ON": ["sound/limiter_on.mp3"],
+        "SWITCH_TOGGLE": ["sound/switch.mp3"],
+        "TAB_CLOSE": ["sound/close_tab.mp3"],
+        "TAB_INSERT": ["sound/new_tab.mp3"],
+        "TAB_SLASH": ["sound/tab_slash.mp3"]
+      },
+      "keyboard_sounds": {
+        "TYPING_BACKSPACE": [],
+        "TYPING_ENTER": [],
+        "TYPING_LETTER": [],
+        "TYPING_SPACE": []
+      },
+      "page_styles": [
+        {
+          "css": ["webmodding/opera.css"],
+          "matches": ["https://*.opera.com/*"]
+        }
+      ],
+      "theme": {
+        "dark": {
+          "gx_accent": { "h": 270, "s": 100, "l": 60 },
+          "gx_secondary_base": { "h": 230, "s": 35, "l": 20 },
+          "gx_toolbar_background": { "h": 240, "s": 20, "l": 15 },
+          "gx_sidebar_background": { "h": 240, "s": 35, "l": 18 },
+          "gx_tab_background": { "h": 260, "s": 45, "l": 20 },
+          "gx_tab_text_color": { "h": 0, "s": 0, "l": 90 },
+          "gx_button_background": { "h": 260, "s": 50, "l": 40 },
+          "gx_button_text_color": { "h": 0, "s": 0, "l": 95 },
+          "gx_panel_background": { "h": 230, "s": 40, "l": 22 },
+          "gx_text_color": { "h": 0, "s": 0, "l": 85 },
+          "gx_link_color": { "h": 230, "s": 50, "l": 50 },
+          "gx_highlight_color": { "h": 260, "s": 50, "l": 70 }
+        },
+        "light": {
+          "gx_accent": { "h": 210, "s": 100, "l": 50 },
+          "gx_secondary_base": { "h": 210, "s": 60, "l": 40 },
+          "gx_toolbar_background": { "h": 210, "s": 40, "l": 90 },
+          "gx_sidebar_background": { "h": 210, "s": 50, "l": 75 },
+          "gx_tab_background": { "h": 210, "s": 40, "l": 85 },
+          "gx_tab_text_color": { "h": 0, "s": 0, "l": 10 },
+          "gx_button_background": { "h": 210, "s": 60, "l": 70 },
+          "gx_button_text_color": { "h": 0, "s": 0, "l": 10 },
+          "gx_panel_background": { "h": 210, "s": 50, "l": 80 },
+          "gx_text_color": { "h": 0, "s": 0, "l": 10 },
+          "gx_link_color": { "h": 210, "s": 70, "l": 55 },
+          "gx_highlight_color": { "h": 210, "s": 80, "l": 70 }
+        }
+      },
+      "wallpaper": {
+        "light": {
+          "image": "wallpaper/light.jpg",
+          "text_color": "#FFFFFF",
+          "text_shadow": "#1F1F1F"
+        },
+        "dark": {
+          "image": "wallpaper/dark.jpg",
+          "text_color": "#FFFFFF",
+          "text_shadow": "#000000"
+        }
+      }
+    },
+    "schema_version": 1
+  },
+  "version": "1.7"
+}

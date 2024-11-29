@@ -1,0 +1,161 @@
+/* Definir colores base inspirados en Sasuke */
+:root {
+    /* Colores para el tema oscuro */
+    --accent-color-dark: hsl(275, 80%, 55%);  /* Azul Chidori (electricidad) */
+    --background-color-dark: hsl(220, 25%, 10%); /* Fondo negro profundo con toques azules */
+    --button-background-dark: hsl(230, 30%, 20%); /* Botones oscuros */
+    --button-text-color-dark: hsl(0, 0%, 100%); /* Texto blanco para el contraste */
+    --text-color-dark: hsl(0, 0%, 90%); /* Gris claro */
+    --link-color-dark: hsl(210, 50%, 50%); /* Enlaces azules, inspirados en el Rinnegan */
+    --highlight-color-dark: hsl(220, 60%, 65%); /* Resplandor azul, como el Chidori */
+    --shadow-color-dark: rgba(0, 0, 0, 0.7); /* Sombra profunda */
+    
+    /* Colores para el tema claro */
+    --accent-color-light: hsl(210, 70%, 55%); /* Azul brillante, similar al cielo despejado */
+    --background-color-light: hsl(210, 20%, 90%); /* Azul suave, atardecer claro */
+    --button-background-light: hsl(210, 15%, 75%); /* Azul suave para botones */
+    --button-text-color-light: hsl(0, 0%, 20%); /* Texto oscuro */
+    --text-color-light: hsl(0, 0%, 20%); /* Gris oscuro para el texto */
+    --link-color-light: hsl(210, 50%, 50%); /* Azul vivo para los enlaces */
+    --highlight-color-light: hsl(210, 45%, 60%); /* Resplandor brillante azul */
+    --shadow-color-light: rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    
+    /* Animaciones generales para transiciones fluidas */
+    --transition-speed: 0.5s; /* Velocidad de las transiciones */
+}
+
+/* Animación de fondo para el tema oscuro, creando el efecto de electricidad o energía */
+@keyframes glowAnimation {
+    0% {
+        background-color: hsl(220, 25%, 10%); /* Fondo oscuro inicial */
+    }
+    50% {
+        background-color: hsl(220, 50%, 20%); /* Fondo más brillante en el medio, como una energía creciente */
+    }
+    100% {
+        background-color: hsl(220, 25%, 10%); /* Vuelve al fondo original oscuro */
+    }
+}
+
+/* Aplicar colores base al body para ambos temas */
+body {
+    color: var(--text-color-dark);
+    background: var(--background-color-dark); /* Fondo inicial */
+    text-shadow: 0px 0px 10px var(--highlight-color-dark), 0px 0px 20px var(--highlight-color-dark); /* Efecto Chidori */
+    font-family: "Arial", sans-serif;
+    animation: glowAnimation 6s ease-in-out infinite; /* Animación aplicada a background-color */
+    transition: background 0.5s ease, color 0.5s ease, text-shadow 0.5s ease;
+}
+
+/* Botones con efectos de animación */
+button {
+    background-color: var(--button-background-dark);
+    color: var(--button-text-color-dark);
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color-dark);
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Efectos de hover en botones */
+button:hover {
+    background-color: var(--highlight-color-dark);
+    box-shadow: 0 10px 20px var(--highlight-color-dark); /* Efecto brillante como el Chidori */
+    transform: scale(1.05);
+}
+
+/* Fondo de las pestañas */
+.gx_tab_background {
+    background-color: hsl(210, 15%, 25%); /* Azul oscuro */
+    border-bottom: 3px solid var(--highlight-color-dark);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efectos en las pestañas (hover) */
+.gx_tab_background:hover {
+    background-color: var(--highlight-color-dark);
+    transform: translateY(-5px); /* Levitación para dar un efecto dinámico */
+}
+
+/* Texto de las pestañas */
+.gx_tab_text_color {
+    color: var(--text-color-dark);
+    font-weight: bold;
+    transition: color var(--transition-speed) ease;
+}
+
+.gx_tab_background:hover .gx_tab_text_color {
+    color: var(--button-text-color-dark);
+}
+
+/* Enlaces */
+a {
+    color: var(--link-color-dark);
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--highlight-color-dark);
+    text-shadow: 0px 0px 10px var(--highlight-color-dark);
+    transform: scale(1.1);
+}
+
+/* Pestañas activas con más resplandor */
+.gx_tab_background.active {
+    background-color: var(--highlight-color-dark);
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 20px var(--highlight-color-dark);
+}
+
+/* Tema Claro - Ajustes de colores para fondo claro y transiciones */
+body.light-theme {
+    color: var(--text-color-light);
+    background: var(--background-color-light);
+    text-shadow: 0px 0px 8px var(--highlight-color-light), 0px 0px 15px var(--highlight-color-light); /* Brillo suave */
+}
+
+/* Botones en tema claro */
+button.light-theme {
+    background-color: var(--button-background-light);
+    color: var(--button-text-color-light);
+}
+
+button.light-theme:hover {
+    background-color: var(--highlight-color-light);
+    box-shadow: 0 8px 20px var(--highlight-color-light);
+}
+
+/* Pestañas activas en tema claro */
+.gx_tab_background.light-theme.active {
+    background-color: var(--highlight-color-light);
+    box-shadow: 0px 0px 20px var(--highlight-color-light);
+    transform: translateY(-10px);
+}
+
+/* Fondo de pestañas con transición */
+.gx_tab_background {
+    background-color: var(--background-color-light);
+    border-bottom: 3px solid var(--highlight-color-light);
+}
+
+/* Texto de las pestañas (tema claro) */
+.gx_tab_text_color.light-theme {
+    color: var(--text-color-light);
+}
+
+#gxcorner {
+    background-image: url('wallpaper/dark.jpg'); /* Ruta a tu fondo */
+    background-size: cover; /* Asegura que el fondo cubra todo el área */
+    background-position: center center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+    position: relative;
+    z-index: -1; /* Si es necesario para colocar el fondo detrás de otros elementos */
+}
+
+
